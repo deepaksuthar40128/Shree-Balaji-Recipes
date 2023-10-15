@@ -48,6 +48,6 @@ export const GET = async (req: NextRequest) => {
         console.log("gone")
         return new NextResponse(JSON.stringify(data));
     } catch (err) {
-        console.log(err);
+        return new NextResponse(JSON.stringify({ success: false }));
     }
 }
