@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.mainContainer {
+    .mainPage {
+        .hero {
+            position: relative;
+
+            img {
+                width: 100% !important;
+                height: 500px !important;
+            }
+        }
+
+        .heroText {
+            position: absolute;
+            right: 10%;
+            top: 10%;
+            text-align: center;
+
+            h2 {
+                font-family: 'Shadows Into Light', cursive;
+                font-size: 45px;
+            }
+
+            p {
+                margin: 30px 0 50px 0;
+            }
+
+            h4 {
+                color: red;
+            }
+
+            /* CSS */
+            .button-89 {
+                --b: 3px;
+                --s: .45em;
+                --color: #373B44;
+                cursor: pointer;
+                padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+                color: var(--color);
+                --_p: var(--s);
+                background:
+                    conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+                transition: .3s linear, color 0s, background-color 0s;
+                outline: var(--b) solid #0000;
+                outline-offset: .6em;
+                font-size: 16px;
+
+                border: 0;
+
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+            }
+
+            .button-89:hover,
+            .button-89:focus-visible {
+                --_p: 0px;
+                outline-color: var(--color);
+                outline-offset: .05em;
+            }
+
+            .button-89:active {
+                background: var(--color);
+                color: #fff;
+            }
+        }
+    }
+
+    .homeRecepis {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .middle_main {
+        width: 100%;
+        height: 150px;
+        text-align: center;
+        background: linear-gradient(#f3edf8, #edeeee);
+        transform: translate(0px, -4px);
+
+        form {
+            input {
+                width: 40%;
+                height: 35px;
+                outline: none;
+                border: none;
+                box-shadow: 0 0 10px 0.2px #e2e2e2;
+                border-radius: 30px;
+                margin-top: 20px;
+                padding: 19px;
+                box-sizing: border-box;
+                font-size: 15px;
+            }
+
+            button {
+                font-size: 20px;
+                border: none;
+                background: transparent;
+                color: #777777;
+                transform: translate(-30px, 2px);
+                cursor: pointer;
+            }
+        }
+    }
+}
