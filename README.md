@@ -1,8 +1,28 @@
 # Shree Balaji Recipes
+Shree Balaji Recipes a website where you can share Recepies and try recepies shared by other user this webite
+is build on the top of `Next Js`, `SCSS` and `TypeScript` with optimised Server side rendring.
 
-### Nextjs,Scss,TS
 
-### Images
+## Features
+ 
+- Efficient use of server side rendering for fast loading.
+- Can share Text with Images.
+- Pagination to handle multiple recepies.
+- Powerfull search with serch over Recepies.
+
+
+## Installation
+
+1. Clone the repository: `git clone https://github.com/deepaksuthar40128/Shree-Balaji-Recipes`
+2. Navigate to the project directory: `cd Shree-Balaji-Recepies`
+3. Build image: `docker build -t shree-balaji-recepis .`
+4. Run image: `docker run -it -p3000:3000 shree-balaji-recepis`
+5. Navigate to `http://localhost:3000`
+
+### For any suggestion and improvement feel free to contact me [Deepak Suthar](https://deepaksuthar.vercel.app)
+
+### Demo Images
+
 ##### Home Page
 
 Here you can search different Recepies and checkout them.
@@ -28,7 +48,6 @@ Page regeneration (dynamic loading) for better performance and a smooth user exp
 ![Screenshot (163)](https://github.com/deepaksuthar40128/Shree-Balaji-Recipes/assets/92250394/90f0ff32-cb88-4fe1-98be-d65f8f1378ae)
 ![Screenshot (164)](https://github.com/deepaksuthar40128/Shree-Balaji-Recipes/assets/92250394/025dde89-9d9b-4580-9e54-1cc468e61922)
 ![Screenshot (165)](https://github.com/deepaksuthar40128/Shree-Balaji-Recipes/assets/92250394/f6612ac6-157a-42c4-8828-c0fe623c2a19)
-
 
 
 
