@@ -1,6 +1,27 @@
 import { notFound } from "next/navigation";
 import '@/app/add/add.scss'
 import './page.scss'
+import { Metadata } from "next";
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+    const id = params.id
+
+    const product = await fetch(process.env.URL + `/api/recepi/${id}`).then((res) => res.json())
+
+    return {
+        title: product.title,
+        description: product.recepi,
+        openGraph: {
+            type: "website",
+            url: `https://shree-balaji-recipes.vercel.app/recepi/${id}`,
+            title: "Shree Balaji Recipes",
+            description: product.recepi,
+            siteName: "Shree Balaji Recipes",
+            images: [{
+                url: product.heroImage,
+            }],
+        },
+    }
+}
 export const dynamic = 'force-dynamic';
 const getData = async (id: string) => {
     const res = await fetch(process.env.URL + `/api/recepi/${id}`);
@@ -14,10 +35,20 @@ const parseMonth = (num: number): string => {
     let month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return month[num];
 }
+
 const recepi: React.FunctionComponent<any> = async ({ params }: { params: any }): Promise<any> => {
     const data = await getData(params.id);
+    const jsonLd = {
+        '@context': 'https://shree-balaji-recepies.vercel.app',
+        '@type': 'Recepi',
+        ...data
+    }
     return (
         <div className="main_add">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <div className="add_preview">
                 <div className="main_preview">
                     <div className="user_preview">
