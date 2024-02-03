@@ -1,0 +1,427 @@
+.main_add {
+    .add_editor {
+        display: flex;
+        flex-wrap: wrap;
+
+        .main_editor {
+            width: 40%;
+            min-width: 400px;
+
+            .add_form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 5px;
+                background-color: white;
+                margin: 30px;
+                padding: 50px 0;
+
+                p {
+                    font-size: 20px;
+                    text-align: left;
+                    width: 80%;
+                }
+
+                input {
+                    width: 80%;
+                    margin: 20px 0;
+                    height: 42px;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    padding: 15px;
+                    border: 1px solid #7171712b;
+                    font-size: 15px;
+                    background-color: rgb(233 233 233 / 17%);
+
+                    &:active,
+                    &:focus {
+                        border: 1px solid #eac924;
+                    }
+                }
+
+            }
+
+            .add_recepi {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 5px;
+                background-color: white;
+                margin: 30px;
+                padding: 50px 0;
+
+                .add_recepi_p {
+                    font-size: 20px;
+                    text-align: left;
+                    width: 80%;
+                }
+
+                .quill {
+                    width: 80%;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .add_images {
+            width: 50%;
+            margin: 30px 5%;
+            background-color: white;
+            border-radius: 5px;
+
+            .add_hero_image {
+                display: flex;
+
+                .add_hero_input_file {
+                    p {
+                        text-align: center;
+                        margin-top: 30px;
+                    }
+
+                    label {
+                        width: 60%;
+                        margin: 20px auto;
+                        display: block;
+
+                        div {
+                            width: 100%;
+                            background-color: rgb(230, 230, 255);
+                            padding: 20px;
+                            border: 2px solid rgb(91, 159, 237);
+                            cursor: pointer;
+                            text-align: center;
+
+                            i {
+                                font-size: 40px;
+                            }
+
+                            &:hover {
+                                background-color: rgb(238, 238, 255);
+                            }
+                        }
+                    }
+
+                    width: 40%;
+                }
+
+                .hero_preview {
+                    width: 60%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 40px 0;
+
+                    div {
+                        height: 200px;
+                        width: 200px;
+                        object-fit: cover;
+                        position: relative;
+                        box-shadow: 0 0 10px 0.1px rgb(226, 226, 226);
+
+                        i {
+                            position: absolute;
+                            right: 0px;
+                            transform: translate(50%, -50%);
+                            z-index: 1;
+                            font-size: 25px;
+                            cursor: pointer;
+                        }
+
+                        img {
+                            height: 100% !important;
+                            width: 100% !important;
+                            transition: all 0.5s;
+
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .add_other_images {
+
+                .add_more_images_input_file {
+
+                    p {
+                        text-align: center;
+                        margin-top: 30px;
+                    }
+
+
+                    label {
+                        width: 60%;
+                        margin: 20px auto;
+                        display: block;
+
+                        div {
+                            width: 100%;
+                            background-color: rgb(230, 230, 255);
+                            padding: 20px;
+                            border: 2px solid rgb(91, 159, 237);
+                            cursor: pointer;
+                            text-align: center;
+
+                            i {
+                                font-size: 40px;
+                            }
+
+                            &:hover {
+                                background-color: rgb(238, 238, 255);
+                            }
+                        }
+                    }
+                }
+
+                .more_image_preview {
+                    margin: 40px 0;
+
+                    div {
+                        height: 200px;
+                        width: 200px;
+                        object-fit: cover;
+                        position: relative;
+                        box-shadow: 0 0 10px 0.1px rgb(226, 226, 226);
+                        display: inline-block;
+                        margin: 15px;
+
+                        i {
+                            position: absolute;
+                            right: 0px;
+                            transform: translate(50%, -50%);
+                            z-index: 1;
+                            font-size: 25px;
+                            cursor: pointer;
+                        }
+
+                        img {
+                            height: 100% !important;
+                            width: 100% !important;
+                            transition: all 0.5s;
+
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .add_preview {
+        width: 80%;
+        margin: auto;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px 0;
+
+        .preview_heading {
+            text-align: center;
+            margin: 30px 0;
+
+            h2 {
+                padding-top: 10px;
+                text-decoration: underline;
+            }
+        }
+
+        .card_preview {
+            display: flex;
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px 0;
+            border-radius: 5px;
+            flex-wrap: wrap;
+            box-shadow: 0 0 10px 0.1px rgb(226, 226, 226);
+
+            .card_preview_text {
+                width: 40%;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .card_preview_look {
+                width: 60%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .main_preview {
+            width: 80%;
+            margin: 30px auto;
+            box-sizing: border-box;
+            padding: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px 0.1px rgb(226, 226, 226);
+
+            .user_preview {
+                border-bottom: 1px solid rgb(217, 217, 217);
+                width: 80%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                padding: 5px 0;
+                justify-content: space-between;
+
+                .main_preview_title {
+                    font-size: 20px;
+                    text-align: left;
+                }
+
+                .user_preview_div {
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        p {
+                            color: grey;
+                        }
+                    }
+
+                    img {
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        margin-left: 20px;
+                    }
+                }
+
+            }
+
+            .sub_preview {
+
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 10px;
+
+                .preview_text {
+                    padding: 5px 10px;
+                    width: 49%;
+                    font-size: 14px;
+                    margin-top: 10px;
+
+                    li {
+                        list-style: none;
+                        padding-left: 50px;
+
+                        &::before {
+                            content: "•";
+                            padding-right: 5px;
+                        }
+                    }
+                }
+
+                .preview_seprator {
+                    width: 0;
+                    border: 1px solid rgb(210, 210, 210);
+                }
+
+                .add_preview_images {
+                    width: 49%;
+                    margin-top: 10px;
+
+                    .add_preview_hero {
+                        width: 100%;
+                        text-align: center;
+
+                        img {
+                            width: 300px;
+                            height: 300px;
+                            transition: all 0.5s;
+
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+                        }
+
+                        border-bottom:1px solid rgb(158, 158, 158);
+                        padding-bottom: 20px;
+                    }
+
+                    .preview_Images {
+                        div {
+                            display: inline-block;
+                            margin: 2%;
+                            min-width: 150px;
+                            width: 200px;
+                            width: 45%;
+                            height: 200px;
+                            object-fit: cover;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                transition: all 0.5s;
+
+                                &:hover {
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .add_confirm {
+        width: 80%;
+        margin: 30px auto;
+        background-color: white;
+        border-radius: 5px;
+        padding: 15px 0;
+        text-align: center;
+
+        button {
+            background-image: linear-gradient(-180deg, #00D775, #00BD68);
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            height: 44px;
+            line-height: 44px;
+            outline: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            pointer-events: auto;
+            position: relative;
+            touch-action: manipulation;
+            user-select: none;
+            margin: 0 10px;
+            -webkit-user-select: none;
+            vertical-align: top;
+            white-space: nowrap;
+            width: max-content;
+            z-index: 9;
+            border: 0;
+
+            &:hover {
+                background: #00bd68;
+            }
+
+            &:active {
+                background: #009a55;
+            }
+        }
+
+        .cancel {
+            background-image: linear-gradient(-180deg, #e94b20, #e93d3d);
+
+            &:hover {
+                background: #cf0e00;
+            }
+
+            &:active {
+                background: #ec0000;
+            }
+        }
+    }
+}

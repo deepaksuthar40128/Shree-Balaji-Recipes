@@ -1,0 +1,90 @@
+.mainCard {
+    width: 350px;
+    height: 200px;
+    display: flex;
+    transform: scale(0.8);
+    border-radius: 20px;
+    background: linear-gradient(rgb(255, 252, 246), rgb(255, 241, 216));
+    box-shadow: 0px 0px 10px 0.2px rgb(207, 207, 207);
+
+    .card_info {
+        margin: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex: 9;
+
+        .card_title,
+        .calaries {
+            width: 80%;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .calaries {
+            position: relative;
+
+            .goto_icon {
+                width: 30px;
+                background: yellowgreen;
+                border-radius: 50%;
+                text-align: center;
+                height: 30px;
+                color: white;
+                position: absolute;
+                right: 0;
+                top: 0px;
+                transform: rotate(315deg);
+                cursor: pointer;
+
+                &:hover {
+                    background: rgb(182, 232, 80);
+                }
+            }
+        }
+
+        .cardFeature {
+            width: 80%;
+
+            div {
+                i {
+                    color: red;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .card_img {
+        position: relative;
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        div {
+            object-fit: cover;
+            position: absolute;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 170px;
+            height: 170px;
+            right: 0;
+            transform: translate(50%, 0);
+            box-shadow: 0px 0px 10px 0.2px rgb(207, 207, 207);
+
+            img {
+                width: 100% !important;
+                height: 100% !important;
+                transition: all 0.5s;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
